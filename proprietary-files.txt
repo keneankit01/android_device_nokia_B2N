@@ -27,7 +27,36 @@ vendor/firmware/TAS2557MSSMono_B2N.bin
 vendor/firmware/TAS2557MSSMono_B2N_dvt.bin
 vendor/firmware/TAS2557MSSMono_B2N_dvt_ICTspk.bin
 
-# Camera
+# Camera-configs
+vendor/etc/B2N/ncf/aux/ISO200_1280x720.ncf
+vendor/etc/B2N/ncf/aux/ISO200_1600x1200.ncf
+vendor/etc/B2N/ncf/aux/ISO200_2688x1512.ncf
+vendor/etc/B2N/ncf/aux/ISO200_3200x2400.ncf
+vendor/etc/B2N/ncf/aux/ISO200_3840x2160.ncf
+vendor/etc/B2N/ncf/aux/ISO200_4032x2016.ncf
+vendor/etc/B2N/ncf/aux/ISO200_4032x3024.ncf
+vendor/etc/B2N/ncf/rear/ISO200_1280x720.ncf
+vendor/etc/B2N/ncf/rear/ISO200_1600x1200.ncf
+vendor/etc/B2N/ncf/rear/ISO200_2688x1512.ncf
+vendor/etc/B2N/ncf/rear/ISO200_3200x2400.ncf
+vendor/etc/B2N/ncf/rear/ISO200_3840x2160.ncf
+vendor/etc/B2N/ncf/rear/ISO200_4032x2016.ncf
+vendor/etc/B2N/ncf/rear/ISO200_4032x3024.ncf
+vendor/etc/camera/calibration_test.bin
+vendor/etc/camera/camera_config.xml
+vendor/etc/camera/mgbeautify_1_2_4_model
+vendor/etc/camera/s5k2l7sa05_b2n_wide_chromatix.xml
+vendor/etc/camera/s5k3m3sm_b2n_tele_chromatix.xml
+vendor/etc/camera/s5k3p8sp_b2n_chromatix.xml
+
+#camera-artuators
+vendor/lib/libactuator_ak7371_tele_b2n.so
+vendor/lib/libactuator_ak7371_wide_b2n.so
+
+#camera-arcsoft
+vendor/lib/libarcsoft_dualcam_refocus.so
+
+# Camera-chromatix
 vendor/lib/libchromatix_s5k2l7sa05_b2n_wide_4k_preview_3a.so
 vendor/lib/libchromatix_s5k2l7sa05_b2n_wide_4k_video_3a.so
 vendor/lib/libchromatix_s5k2l7sa05_b2n_wide_common.so
@@ -100,9 +129,6 @@ vendor/lib/libchromatix_s5k3p8sp_b2n_preview.so
 vendor/lib/libchromatix_s5k3p8sp_b2n_snapshot.so
 vendor/lib/libchromatix_s5k3p8sp_b2n_versions.so
 vendor/lib/libchromatix_s5k3p8sp_b2n_video.so
-vendor/etc/camera/s5k2l7sa05_b2n_wide_chromatix.xml
-vendor/etc/camera/s5k3m3sm_b2n_tele_chromatix.xml
-vendor/etc/camera/s5k3p8sp_b2n_chromatix.xml
 
 # Fingerprint (Firmware - Goodix)
 vendor/firmware/goodix_config.cfg
@@ -124,16 +150,33 @@ vendor/firmware/gxfp3208_b2n.b07
 vendor/firmware/gxfp3208_b2n.mdt
 
 # Fingerprint (Goodix)
+vendor/bin/qfp-daemon
+vendor/etc/init/hw/init.fingerprint.gxfp3208_b2n.rc
 vendor/lib64/hw/fingerprint.gxfp3208_b2n.so
 vendor/lib64/libgf_ca_gxfp3208_b2n.so
 vendor/lib64/libgf_hal_gxfp3208_b2n.so
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
 vendor/lib64/libvendor.goodix.hardware.fingerprintextension@1.0.so
+vendor/lib64/libqfp-service.so
 
 # Graphics (Firmware - Adreno)
 vendor/firmware/a512_zap.b01
 vendor/firmware/a512_zap.mdt
+
+# NFC (Samsung)
+vendor/bin/sec_nfc_test
+vendor/bin/hw/android.hardware.nfc@1.2-service.sec
+vendor/bin/hw/vendor.nxp.hardware.nfc@1.2-service
+vendor/etc/init/hw/android.hardware.nfc@1.2-service.sec.rc
+vendor/etc/permissions/com.gsma.services.nfc.sec.xml
+vendor/etc/nfcee_access.xml
+vendor/lib/nfc_nci_sec.so
+vendor/lib64/nfc_nci_sec.so
+
+# NFC (Firmware -Samsung)
+vendor/firmware/sec_s3nrn81_firmware.bin
+vendor/etc/sec_s3nrn81_rfreg.bin
 
 # Sensor (Configs)
 vendor/etc/sensors/sensor_def_qcomdev_b2.conf
