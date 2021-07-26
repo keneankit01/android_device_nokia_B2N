@@ -15,8 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_B2N.mk
-
+    $(LOCAL_DIR)/lineage_B2N.mk \
+    $(LOCAL_DIR)/ancient_B2N.mk
+    
 COMMON_LUNCH_CHOICES := \
     lineage_B2N-eng \
     lineage_B2N-user \
